@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Curl de biceps",
+        "involved_muscles": [
+            1
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Bench Press",
+        "involved_muscles": [
+            2,
+            3
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Chin up",
+        "involved_muscles": [
+            1,
+            4
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Pull up",
+        "involved_muscles": [
+            1,
+            4
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Squat",
+        "involved_muscles": [
+            5,
+            13
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Deadlift",
+        "involved_muscles": [
+            6,
+            13
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Pendlay row",
+        "involved_muscles": [
+            1,
+            4,
+            13
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Overhead press",
+        "involved_muscles": [
+            2,
+            3,
+            11
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Lateral raise",
+        "involved_muscles": [
+            12
+        ]
+    }
+]
