@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "name": "Jorge Marco Arráez",
+        "birth_date": "2001-03-05"
+    },
+    {
+        "id": 2,
+        "name": "Sofia Andujar Munoz",
+        "birth_date": "2001-01-24"
+    }
+]
