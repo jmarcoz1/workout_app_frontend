@@ -64,7 +64,7 @@ const AppWithSidebar = () => {
       {/* Main Content */}
       <div>
         {selectedPage === 'profile' && (
-          <ProfilePage userName="John Doe" dateOfBirth="January 1, 1990" />
+          <ProfilePage name='Sofia Andujar' userName='sofowo' dateJoined='24th Jan 2001' />
         )}
 
         {selectedPage === 'training' && (

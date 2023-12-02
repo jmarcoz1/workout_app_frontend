@@ -1,16 +1,46 @@
-import React from 'react'
-import { Typography, Grid } from '@mui/material';
+import React, { useState } from 'react'
+import { Typography, Card, CardContent, CardActions, Box, IconButton, Grid } from '@mui/material';
+import Avatar from '@mui/material/Avatar';
+import SettingsIcon from '@mui/icons-material/Settings';
+import CustomCard from '../UI/CustomCard';
 
 const ProfilePage = (props) => {
 
-  let name = props.userName
-  let dateOfBirth = props.dateOfBirth
+  let userName = props.userName
+  let name = props.name
+  let dateJoined = props.dateJoined
+
+  // const [settings, useSettings] = useState(false)
+
+  // const openSettings = () => {
+  //   useSettings(true)
+  // }
+
+  const cardContent = (
+    <Grid container direction='column' spacing={2}>
+      <Grid item xs={3}>
+        <Avatar src='../../media/avatar.jpg' />
+      </Grid>
+      <Grid item xs={3}>
+        <Typography variant="h7">@{userName}</Typography>
+      </Grid>
+      <Grid item xs={3}>
+        <Typography variant="h7">{name}</Typography>
+      </Grid>
+      <Grid item xs={3}>
+        <Typography variant="h7"  >Getting stronger since {dateJoined}</Typography>
+      </Grid>
+    </Grid>
+  )
+
+  const cardActions = (
+    <IconButton color="secondary" >
+      <SettingsIcon />
+    </IconButton>
+  )
 
   return (
-    <div>
-      <Typography>{name}</Typography>
-      <Typography>{dateOfBirth}</Typography>
-    </div>
+    <CustomCard cardContent={cardContent} cardActions={cardActions} />
   )
 }
 
