@@ -70,7 +70,7 @@ const PerformedSets = (props) => {
 
             {/* Third Section - Sets */}
             <FieldLabels/>
-            <Grid item xs={12}>
+            <Grid item container xs={12}>
                 {/* Mapping through the setsData to generate Set components */}
                 {setsData.map((set, index) => (
                     <Set
