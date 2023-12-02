@@ -1,5 +1,5 @@
-import { Typography } from '@mui/material';
-import Grid from '@mui/material/Unstable_Grid2';
+import { Typography, Grid } from '@mui/material';
+import TextField from '@mui/material/TextField';
 
 const Set = (props) => {
 
@@ -14,18 +14,28 @@ const Set = (props) => {
                 <Typography>#{setNumber}</Typography>
             </Grid>
             <Grid item xs={3}>
-                <Typography>{weight}</Typography>
+                <TextField
+                    required
+                    id="outlined-required"
+                    defaultValue={weight}
+                />
             </Grid>
             <Grid item xs={3}>
-                <Typography>{reps}</Typography>
+                <TextField
+                    required
+                    id="outlined-required"
+                    defaultValue={reps}
+                />
             </Grid>
             <Grid item xs={3}>
-                <Typography>{rir}</Typography>
+                <TextField
+                    required
+                    id="outlined-required"
+                    defaultValue={rir}
+                />
             </Grid>
         </Grid>
     );
 };
-
-
 
 export default Set;
