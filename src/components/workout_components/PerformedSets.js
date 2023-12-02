@@ -156,7 +156,7 @@ const PerformedSets = (props) => {
     }
 
     return (
-        <Grid container spacing={2}>
+        <Grid container item spacing={2}>
             {/* First Section */}
             <Grid item xs={12}>
                 <Typography variant="h5">{props.exerciseName}</Typography>

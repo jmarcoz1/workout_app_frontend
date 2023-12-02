@@ -1,10 +1,10 @@
 import { Typography, Grid, Box } from '@mui/material';
-import PerformedExercises from './components/workout_components/PerformedSets';
+import ExerciseCard from './components/workout_components/ExerciseCard';
 import './App.css';
 
 const App = () => {
   return (
-    <PerformedExercises
+    <ExerciseCard
       exerciseName={'Bench Press'}
       muscleName={'Pectoralis Major'}
     />
