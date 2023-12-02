@@ -4,6 +4,9 @@ import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import { AppBar, Toolbar, IconButton, Typography, Drawer, List, ListItem, ListItemText, ListItemIcon, ListItemButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
+import ProfilePage from '../pages/ProfilePage'
+import TrainingPage from '../pages/TrainingPage';
+
 const AppWithSidebar = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const [selectedPage, setSelectedPage] = useState('profile'); // Default selected page
@@ -61,19 +64,11 @@ const AppWithSidebar = () => {
       {/* Main Content */}
       <div>
         {selectedPage === 'profile' && (
-          // Render the content for the 'My profile' page
-          <div>
-            <Typography variant="h4">My Profile Page</Typography>
-            {/* Add your profile page content here */}
-          </div>
+          <ProfilePage userName="John Doe" dateOfBirth="January 1, 1990" />
         )}
 
         {selectedPage === 'training' && (
-          // Render the content for the 'My training' page
-          <div>
-            <Typography variant="h4">My Training Page</Typography>
-            {/* Add your training page content here */}
-          </div>
+          <TrainingPage />
         )}
       </div>
     </div>

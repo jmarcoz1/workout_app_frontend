@@ -1,5 +1,4 @@
 import { Typography, Grid } from '@mui/material';
-import TextField from '@mui/material/TextField';
 import Set from './Set'; // Import the Set component
 
 const PerformedSets = (props) => {
