@@ -10,7 +10,15 @@ const login = async (username, password) => {
 
     localStorage.setItem('access', response.data.access);
     localStorage.setItem('refresh', response.data.refresh);
+    localStorage.setItem('username', response.data.username);
+    // this.setState({ username: response.data.username });
+
 }
+
+// const userId = async (username) => {
+//     const response = await axios.get(`/api/users/${username}/id/`)
+//     console.log({response})
+// }
 
 const getPrivateData = async () => {
     const response = await axios.get('http://localhost:8000/private-endpoint/', {
@@ -24,10 +32,27 @@ const getPrivateData = async () => {
 
 // CRUD operations for WORKOUTS
 export const getWorkouts = async () => {
-    const response = await axios.get(`${API_URL}/workout/1`, {
-        // headers: {
-        //     'Authorization': `Bearer ${localStorage.getItem('access')}`
-        // }
+    // userId('Jorge')
+    let username = localStorage.getItem('username').toString()
+    let uidResponse = await axios.get(`${API_URL}/users/${username}/id/`)
+    const userID = uidResponse.data.id
+    // fetch(`/api/users/${username}/id/`, {
+    //     headers: {
+    //       'Authorization': `Bearer ${access}`,  // Assuming `token` is your JWT token
+    //     },
+    //   })
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     const userId = data.id;
+    //     console.log({userId})
+    //     // Now you can use the user ID in your other requests
+    //   })
+    //   .catch(error => console.error(error));
+    
+    const response = await axios.get(`${API_URL}/user/${userID}/workouts/`, {
+        headers: {
+            'Authorization': `Bearer ${localStorage.getItem('access')}`
+        }
     });
     return response.data;
 }
