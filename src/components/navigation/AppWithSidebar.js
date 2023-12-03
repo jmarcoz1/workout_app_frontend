@@ -9,8 +9,6 @@ import TrainingPage from '../pages/TrainingPage';
 
 const AppWithSidebar = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
-  const [selectedPage, setSelectedPage] = useState('profile'); // Default selected page
-
   const navigate = useNavigate();
 
   const handleDrawerOpen = () => {
@@ -22,7 +20,6 @@ const AppWithSidebar = () => {
   };
 
   const handlePageChange = (page) => {
-    setSelectedPage(page);
     handleDrawerClose(); // Close the drawer after selecting a page
     navigate(page)
   };
@@ -63,17 +60,6 @@ const AppWithSidebar = () => {
           </ListItemButton>
         </List>
       </Drawer>
-
-      {/* Main Content */}
-      {/* <div>
-        {selectedPage === 'profile' && (
-          <ProfilePage name='Sofia Andujar' userName='sofowo' dateJoined='24th Jan 2001' />
-        )}
-
-        {selectedPage === 'training' && (
-          <TrainingPage />
-        )}
-      </div> */}
     </div>
   );
 };
