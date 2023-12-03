@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Biceps"
+    },
+    {
+        "id": 2,
+        "name": "Triceps"
+    },
+    {
+        "id": 3,
+        "name": "Chest"
+    },
+    {
+        "id": 4,
+        "name": "Back"
+    },
+    {
+        "id": 5,
+        "name": "Quadriceps"
+    },
+    {
+        "id": 6,
+        "name": "Hamstrings"
+    },
+    {
+        "id": 7,
+        "name": "Calves"
+    },
+    {
+        "id": 8,
+        "name": "Abdominals"
+    },
+    {
+        "id": 9,
+        "name": "Calves"
+    },
+    {
+        "id": 10,
+        "name": "Rear deltoids"
+    },
+    {
+        "id": 11,
+        "name": "Frontal deltoids"
+    },
+    {
+        "id": 12,
+        "name": "Lateral deltoids"
+    },
+    {
+        "id": 13,
+        "name": "Glutes"
+    },
+    {
+        "id": 14,
+        "name": "Forearm"
+    }
+]

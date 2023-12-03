@@ -1,0 +1,123 @@
+[
+    {
+        "id": 1,
+        "intensity": 8,
+        "repetitions": 10,
+        "is_bodyweight": false,
+        "weight": "0.00",
+        "exerciseId": [
+            1
+        ],
+        "workoutId": 1
+    },
+    {
+        "id": 2,
+        "intensity": 8,
+        "repetitions": 4,
+        "is_bodyweight": false,
+        "weight": "0.00",
+        "exerciseId": [
+            5
+        ],
+        "workoutId": 2
+    },
+    {
+        "id": 3,
+        "intensity": 8,
+        "repetitions": 4,
+        "is_bodyweight": false,
+        "weight": "0.00",
+        "exerciseId": [
+            5
+        ],
+        "workoutId": 2
+    },
+    {
+        "id": 4,
+        "intensity": 8,
+        "repetitions": 4,
+        "is_bodyweight": false,
+        "weight": "0.00",
+        "exerciseId": [
+            5
+        ],
+        "workoutId": 2
+    },
+    {
+        "id": 5,
+        "intensity": 10,
+        "repetitions": 3,
+        "is_bodyweight": false,
+        "weight": "0.00",
+        "exerciseId": [
+            3
+        ],
+        "workoutId": 2
+    },
+    {
+        "id": 6,
+        "intensity": 10,
+        "repetitions": 3,
+        "is_bodyweight": false,
+        "weight": "0.00",
+        "exerciseId": [
+            3
+        ],
+        "workoutId": 2
+    },
+    {
+        "id": 7,
+        "intensity": 10,
+        "repetitions": 3,
+        "is_bodyweight": false,
+        "weight": "0.00",
+        "exerciseId": [
+            3
+        ],
+        "workoutId": 2
+    },
+    {
+        "id": 8,
+        "intensity": 7,
+        "repetitions": 3,
+        "is_bodyweight": false,
+        "weight": "0.00",
+        "exerciseId": [
+            1
+        ],
+        "workoutId": 2
+    },
+    {
+        "id": 9,
+        "intensity": 7,
+        "repetitions": 3,
+        "is_bodyweight": false,
+        "weight": "0.00",
+        "exerciseId": [
+            9
+        ],
+        "workoutId": 2
+    },
+    {
+        "id": 10,
+        "intensity": 7,
+        "repetitions": 3,
+        "is_bodyweight": false,
+        "weight": "0.00",
+        "exerciseId": [
+            9
+        ],
+        "workoutId": 2
+    },
+    {
+        "id": 11,
+        "intensity": 7,
+        "repetitions": 20,
+        "is_bodyweight": false,
+        "weight": "20.00",
+        "exerciseId": [
+            6
+        ],
+        "workoutId": 2
+    }
+]
