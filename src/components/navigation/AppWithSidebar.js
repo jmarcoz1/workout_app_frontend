@@ -3,7 +3,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import { AppBar, Toolbar, IconButton, Typography, Drawer, List, ListItem, ListItemText, ListItemIcon, ListItemButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-
+import { useNavigate } from 'react-router-dom'
 import ProfilePage from '../pages/ProfilePage'
 import TrainingPage from '../pages/TrainingPage';
 
@@ -22,6 +22,7 @@ const AppWithSidebar = () => {
   const handlePageChange = (page) => {
     setSelectedPage(page);
     handleDrawerClose(); // Close the drawer after selecting a page
+
   };
 
   return (
