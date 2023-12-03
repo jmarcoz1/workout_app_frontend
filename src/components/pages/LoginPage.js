@@ -1,4 +1,5 @@
-import React, { useState, useHistory } from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import { Button, TextField, Container, Typography } from '@mui/material';
 
@@ -6,7 +7,7 @@ const LoginPage = () => {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -21,7 +22,7 @@ const LoginPage = () => {
             localStorage.setItem('refresh', response.data.refresh);
 
             // Redirect the user to the home page or dashboard
-            history.push('/home');  // replace '/home' with your actual home page route
+            navigate('/profile');  // replace '/home' with your actual home page route
         } catch (error) {
             console.error('An error occurred while logging in:', error);
             // Handle the error here, for example by showing an error message to the user
