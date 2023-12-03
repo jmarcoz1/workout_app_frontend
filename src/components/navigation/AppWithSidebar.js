@@ -11,6 +11,8 @@ const AppWithSidebar = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const [selectedPage, setSelectedPage] = useState('profile'); // Default selected page
 
+  const navigate = useNavigate();
+
   const handleDrawerOpen = () => {
     setDrawerOpen(true);
   };
@@ -22,7 +24,7 @@ const AppWithSidebar = () => {
   const handlePageChange = (page) => {
     setSelectedPage(page);
     handleDrawerClose(); // Close the drawer after selecting a page
-
+    navigate(page)
   };
 
   return (
@@ -46,14 +48,14 @@ const AppWithSidebar = () => {
         onClose={handleDrawerClose}
       >
         <List>
-          <ListItemButton onClick={() => handlePageChange('profile')} selected={selectedPage === 'profile'}>
+          <ListItemButton onClick={() => handlePageChange('/profile')}>
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
             <ListItemText primary="My profile" />
           </ListItemButton>
 
-          <ListItemButton onClick={() => handlePageChange('training')} selected={selectedPage === 'training'}>
+          <ListItemButton onClick={() => handlePageChange('/training')}>
             <ListItemIcon>
               <FitnessCenterIcon />
             </ListItemIcon>
@@ -63,7 +65,7 @@ const AppWithSidebar = () => {
       </Drawer>
 
       {/* Main Content */}
-      <div>
+      {/* <div>
         {selectedPage === 'profile' && (
           <ProfilePage name='Sofia Andujar' userName='sofowo' dateJoined='24th Jan 2001' />
         )}
@@ -71,7 +73,7 @@ const AppWithSidebar = () => {
         {selectedPage === 'training' && (
           <TrainingPage />
         )}
-      </div>
+      </div> */}
     </div>
   );
 };
