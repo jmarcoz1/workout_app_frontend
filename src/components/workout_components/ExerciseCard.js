@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PerformedSets from './PerformedSets';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button'; 
+import Button from '@mui/material/Button';
+import { getWorkouts } from '../../API/API'
 
 const ExerciseCard = (props) => {
+
+    const [workouts, setWorkouts] = useState([]);
+
+    const handleButtonClick = async () => {
+        const data = await getWorkouts();
+        setWorkouts(data);
+        console.log(data)
+    }
 
     const card = (
         <React.Fragment>
@@ -17,7 +26,7 @@ const ExerciseCard = (props) => {
                 />
             </CardContent>
             <CardActions>
-                <Button size="small">Learn More</Button>
+                <Button size="small" onClick={handleButtonClick} >Learn More</Button>
             </CardActions>
         </React.Fragment>
     )
