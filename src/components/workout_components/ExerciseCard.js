@@ -20,7 +20,7 @@ const ExerciseCard = (props) => {
     const card = (
         <React.Fragment>
             <CardContent>
-                <PerformedSets 
+                <PerformedSets
                     exerciseName={props.exerciseName}
                     muscleName={props.muscleName}
                 />

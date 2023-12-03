@@ -19,7 +19,7 @@ const ProfilePage = (props) => {
   const cardContent = (
     <Grid container direction='column' spacing={2}>
       <Grid item xs={3}>
-        <Avatar src='../../media/avatar.jpg' />
+        <Avatar src='/src/media/avatar.jpg' />
       </Grid>
       <Grid item xs={3}>
         <Typography variant="h7">@{userName}</Typography>

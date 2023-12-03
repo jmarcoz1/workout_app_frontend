@@ -22,7 +22,7 @@ const LoginPage = () => {
             localStorage.setItem('refresh', response.data.refresh);
 
             // Redirect the user to the home page or dashboard
-            navigate('/profile');  // replace '/home' with your actual home page route
+            navigate('/home');  // replace '/home' with your actual home page route
         } catch (error) {
             console.error('An error occurred while logging in:', error);
             // Handle the error here, for example by showing an error message to the user

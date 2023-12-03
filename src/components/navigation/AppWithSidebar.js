@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import HomeIcon from '@mui/icons-material/Home';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
-import { AppBar, Toolbar, IconButton, Typography, Drawer, List, ListItem, ListItemText, ListItemIcon, ListItemButton } from '@mui/material';
+import { AppBar, Toolbar, IconButton, Typography, Drawer, List, ListItemText, ListItemIcon, ListItemButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useNavigate } from 'react-router-dom'
-import ProfilePage from '../pages/ProfilePage'
-import TrainingPage from '../pages/TrainingPage';
-
 const AppWithSidebar = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const navigate = useNavigate();
@@ -45,14 +42,14 @@ const AppWithSidebar = () => {
         onClose={handleDrawerClose}
       >
         <List>
-          <ListItemButton onClick={() => handlePageChange('/profile')}>
+          <ListItemButton onClick={() => handlePageChange('/home/profile')}>
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
             <ListItemText primary="My profile" />
           </ListItemButton>
 
-          <ListItemButton onClick={() => handlePageChange('/training')}>
+          <ListItemButton onClick={() => handlePageChange('/home/training')}>
             <ListItemIcon>
               <FitnessCenterIcon />
             </ListItemIcon>
