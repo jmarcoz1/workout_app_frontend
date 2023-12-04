@@ -4,6 +4,7 @@ import { Box, Typography, IconButton, List, ListItem, ListItemText } from '@mui/
 import EditIcon from '@mui/icons-material/Edit';
 import HotelIcon from '@mui/icons-material/Hotel';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import DateCalendarServerRequest from '../../UI/CalendarComponent';
 
 const CalendarTrainingPage = () => {
   // const [workouts, setWorkouts] = useState([]);
@@ -69,43 +70,15 @@ const CalendarTrainingPage = () => {
   ];
   
   const [selectedWorkout, setSelectedWorkout] = useState(workouts[0]);
-  
 
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-      <Box sx={{ flexBasis: selectedWorkout ? '40%' : '80%', transition: 'flexBasis 0.3s' }}>
-        {/* Display calendar here */}
-        <List>
-          {workouts.map((workout, index) => (
-            <ListItem key={index} button onClick={() => handleSelectWorkout(workout)}>
-              <IconButton>
-                <CalendarTodayIcon />
-              </IconButton>
-              <ListItemText primary={workout.date} secondary={workout.isTrainingDay ? <EditIcon /> : <HotelIcon />} />
-            </ListItem>
-          ))}
-        </List>
+    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <Box sx={{ display: 'flex', flexGrow: 4, alignItems: 'center', height: '100%' }}>
+        <DateCalendarServerRequest sx={{ transform: 'scale(1.5)' }} />
       </Box>
-      {selectedWorkout && (
-        <Box sx={{ flexBasis: '60%', transition: 'flexBasis 0.3s' }}>
-          {/* Display workout information here */}
-          <Typography variant="h6">
-            Workout for {selectedWorkout.date}
-          </Typography>
-          {selectedWorkout.exercises.map((exercise, index) => (
-            <Box key={index}>
-              <Typography variant="h6">
-                {exercise.name}
-              </Typography>
-              {exercise.sets.map((set, index) => (
-                <Typography key={index}>
-                  Set {index + 1}: {set.repetitions} reps, {set.weight} kg, RIR: {set.RIR}, Completed: {set.completed ? 'Yes' : 'No'}
-                </Typography>
-              ))}
-            </Box>
-          ))}
-        </Box>
-      )}
+      <Box sx={{ display: 'flex', flexGrow: 6, alignItems: 'center', height: '100%' }}>
+        <DateCalendarServerRequest />
+      </Box>
     </Box>
   );
 };

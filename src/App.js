@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import LoginPage from './components/pages/LoginPage';
 import HomePage from './components/pages/HomePage';
-
+import '@material/web/button/filled-button'
 import CalendarTrainingPage from './components/pages/Training/CalendarTrainingPage';
 
 const App = () => {
