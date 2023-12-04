@@ -1,8 +1,9 @@
 import React from 'react';
 import { useRoutes } from 'react-router-dom';
-import AppWithSidebar from '../navigation/AppWithSidebar';
+import AppWithSidebar from '../draftComponents/AppWithSidebar';
 import TrainingPage from './TrainingPage';
 import ProfilePage from './ProfilePage';
+import AppWithTopBar from '../navigation/AppWithTopBar';
 
 const HomePage = () => {
     let routes = useRoutes([
@@ -12,7 +13,7 @@ const HomePage = () => {
 
     return (
         <div>
-            <AppWithSidebar />
+            <AppWithTopBar/>
             {routes}
         </div>
     );
