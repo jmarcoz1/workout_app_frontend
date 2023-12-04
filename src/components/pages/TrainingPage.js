@@ -1,27 +1,21 @@
 import React from 'react'
-import { Typography, Grid } from '@mui/material';
-import ExerciseCard from '../workout_components/ExerciseCard';
+import { useRoutes } from 'react-router-dom';
+//
+import WorkoutTrainingPage from './Training/WorkoutTrainingPage';
+import CalendarTrainingPage from './Training/CalendarTrainingPage';
+import BlockReviewTrainingPage from './Training/BlockReviewTrainingPage';
+import StatisticsTrainingPage from './Training/StatisticsTrainingPage';
 
 const TrainingPage = () => {
-    return (
-        <div>
-          <ExerciseCard
-              key={1}
-              exerciseName={'Bench Press'}
-              muscleName={'Pectoralis Major'}
-          />
-          <ExerciseCard
-            key={2}
-            exerciseName={'Chin ups'}
-            muscleName={'Latismus Dorsis'}
-          />
-          <ExerciseCard
-            key={3}
-            exerciseName={'Hack squat'}
-            muscleName={'Quadriceps'}
-          />
-        </div>
-    )
+
+  let trainingRoutes = useRoutes([
+    { path: '/', element: <WorkoutTrainingPage /> },
+    { path: '/calendar', element: <CalendarTrainingPage /> },
+    { path: '/statistics', element: <StatisticsTrainingPage /> },
+    { path: '/block-review', element: <BlockReviewTrainingPage /> }
+  ]);
+
+  return trainingRoutes;
 }
 
 export default TrainingPage

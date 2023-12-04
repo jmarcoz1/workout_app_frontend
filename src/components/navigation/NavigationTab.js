@@ -1,7 +1,7 @@
 import React from 'react';
 import { IconButton, Menu, MenuItem, Box } from '@mui/material';
 
-const NavigationTab = ({ icon, menuItems }) => {
+const NavigationTab = ({ flex, icon, menuItems }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
@@ -14,7 +14,7 @@ const NavigationTab = ({ icon, menuItems }) => {
   };
 
   return (
-    <Box>
+    <Box sx={{ flexGrow: flex}} >
       <IconButton
         id="basic-button"
         aria-controls="basic-menu"

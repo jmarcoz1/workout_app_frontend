@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { Typography, Card, CardContent, CardActions, Box, IconButton, Grid } from '@mui/material';
-import Avatar from '@mui/material/Avatar';
+//
+import { Typography, Card, CardContent, CardActions, Box, IconButton, Grid, Avatar } from '@mui/material';
 import SettingsIcon from '@mui/icons-material/Settings';
+//
 import CustomCard from '../UI/CustomCard';
 
 const ProfilePage = (props) => {
